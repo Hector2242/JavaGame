@@ -127,7 +127,7 @@ public class MainGame extends ApplicationAdapter {
      */
     @Override
     public void resize(int width, int height) {
-        // Compute largest integer scale that fits both width and height.
+        // Compute the largest integer scale that fits both width and height.
         int scale = Math.max(1, Math.min(width / VIRTUAL_WIDTH, height / VIRTUAL_HEIGHT));
 
         // Calculate the pixel size of the viewport at that scale.
@@ -139,7 +139,7 @@ public class MainGame extends ApplicationAdapter {
         int vpY = (height - vpH) / 2;
 
         // Apply the computed screen bounds to the viewport and update the camera.
-        // The boolean "centerCamera" recenters the camera to the world center.
+        // The boolean "centerCamera" re-centers the camera to the world center.
         viewport.setScreenBounds(vpX, vpY, vpW, vpH);
         viewport.apply(true);
     }
